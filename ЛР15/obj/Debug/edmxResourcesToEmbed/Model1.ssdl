@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище Ip521_SegaAndGeraModel" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Customers">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="ContactName" Type="varchar" MaxLength="20" />
+    <Property Name="CompanyName" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="groups">
+    <Key>
+      <PropertyRef Name="id_gr" />
+    </Key>
+    <Property Name="id_gr" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nazv_gr" Type="varchar" MaxLength="10" />
+    <Property Name="count" Type="int" />
+  </EntityType>
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6013: Первичный ключ в таблице или представлении "Ip521_SegaAndGera.dbo.Orders" не определен, его не удалось вывести. Эта таблица или представление исключены. Чтобы использовать сущность, необходимо проверить схему, добавить правильные ключи и раскомментировать ее.
+        <EntityType Name="Orders">
+          <Property Name="CustomerID" Type="varchar" MaxLength="20" />
+          <Property Name="OrderDate" Type="date" />
+        </EntityType>-->
+  <EntityType Name="students">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fam" Type="varchar" MaxLength="30" />
+    <Property Name="name" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="pol" Type="varchar" MaxLength="3" />
+    <Property Name="group" Type="varchar" MaxLength="6" />
+    <Property Name="dataRo" Type="date" />
+  </EntityType>
+  <EntityType Name="uspev">
+    <Key>
+      <PropertyRef Name="id_s" />
+      <PropertyRef Name="disk" />
+    </Key>
+    <Property Name="id_s" Type="tinyint" Nullable="false" />
+    <Property Name="disk" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="ocenka" Type="decimal" Precision="3" Scale="2" />
+    <Property Name="Дата" Type="date" />
+  </EntityType>
+  <EntityType Name="Абитуриенты">
+    <Key>
+      <PropertyRef Name="Код_абитуриента" />
+    </Key>
+    <Property Name="Код_абитуриента" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Фамилия" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Имя" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Отчество" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Статус" Type="varchar" MaxLength="20" />
+    <Property Name="Город" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Дисциплины">
+    <Key>
+      <PropertyRef Name="Код_дисциплины" />
+    </Key>
+    <Property Name="Код_дисциплины" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Название" Type="varchar" MaxLength="64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Журнал">
+    <Key>
+      <PropertyRef Name="Код_события" />
+    </Key>
+    <Property Name="Код_события" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Описание" Type="varchar" MaxLength="100" />
+    <Property Name="Дата" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Заявления">
+    <Key>
+      <PropertyRef Name="Код_заявления" />
+    </Key>
+    <Property Name="Код_заявления" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Код_абитуриента" Type="int" Nullable="false" />
+    <Property Name="Код_специальности" Type="int" Nullable="false" />
+    <Property Name="Статус" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Оценки">
+    <Key>
+      <PropertyRef Name="Код_оценки" />
+    </Key>
+    <Property Name="Код_оценки" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Код_абитуриента" Type="int" Nullable="false" />
+    <Property Name="Код_экзамена" Type="int" Nullable="false" />
+    <Property Name="Оценка" Type="int" />
+  </EntityType>
+  <EntityType Name="Специальности">
+    <Key>
+      <PropertyRef Name="Код_специальности" />
+    </Key>
+    <Property Name="Код_специальности" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Название" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Вакансия" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Экзамены">
+    <Key>
+      <PropertyRef Name="Код_экзамена" />
+    </Key>
+    <Property Name="Код_экзамена" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Код_специальности" Type="int" />
+    <Property Name="Код_дисциплины" Type="int" />
+    <Property Name="Дата" Type="date" />
+    <Property Name="Положительный_балл" Type="int" />
+  </EntityType>
+  <Association Name="FK__uspev__id_s__3B75D760">
+    <End Role="students" Type="Self.students" Multiplicity="1" />
+    <End Role="uspev" Type="Self.uspev" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="students">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="uspev">
+        <PropertyRef Name="id_s" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Заявления_Абитуриенты">
+    <End Role="Абитуриенты" Type="Self.Абитуриенты" Multiplicity="1" />
+    <End Role="Заявления" Type="Self.Заявления" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Абитуриенты">
+        <PropertyRef Name="Код_абитуриента" />
+      </Principal>
+      <Dependent Role="Заявления">
+        <PropertyRef Name="Код_абитуриента" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Заявления_Абитуриенты1">
+    <End Role="Абитуриенты" Type="Self.Абитуриенты" Multiplicity="1" />
+    <End Role="Заявления" Type="Self.Заявления" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Абитуриенты">
+        <PropertyRef Name="Код_абитуриента" />
+      </Principal>
+      <Dependent Role="Заявления">
+        <PropertyRef Name="Код_абитуриента" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Заявления_Специальности">
+    <End Role="Специальности" Type="Self.Специальности" Multiplicity="1" />
+    <End Role="Заявления" Type="Self.Заявления" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Специальности">
+        <PropertyRef Name="Код_специальности" />
+      </Principal>
+      <Dependent Role="Заявления">
+        <PropertyRef Name="Код_специальности" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_специальности">
+    <End Role="Специальности" Type="Self.Специальности" Multiplicity="1" />
+    <End Role="Заявления" Type="Self.Заявления" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Специальности">
+        <PropertyRef Name="Код_специальности" />
+      </Principal>
+      <Dependent Role="Заявления">
+        <PropertyRef Name="Код_специальности" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище Ip521_SegaAndGeraModelContainer">
+    <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="groups" EntityType="Self.groups" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="students" EntityType="Self.students" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="uspev" EntityType="Self.uspev" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Абитуриенты" EntityType="Self.Абитуриенты" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Дисциплины" EntityType="Self.Дисциплины" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Журнал" EntityType="Self.Журнал" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Заявления" EntityType="Self.Заявления" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Оценки" EntityType="Self.Оценки" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Специальности" EntityType="Self.Специальности" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Экзамены" EntityType="Self.Экзамены" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__uspev__id_s__3B75D760" Association="Self.FK__uspev__id_s__3B75D760">
+      <End Role="students" EntitySet="students" />
+      <End Role="uspev" EntitySet="uspev" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Заявления_Абитуриенты" Association="Self.FK_Заявления_Абитуриенты">
+      <End Role="Абитуриенты" EntitySet="Абитуриенты" />
+      <End Role="Заявления" EntitySet="Заявления" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Заявления_Абитуриенты1" Association="Self.FK_Заявления_Абитуриенты1">
+      <End Role="Абитуриенты" EntitySet="Абитуриенты" />
+      <End Role="Заявления" EntitySet="Заявления" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Заявления_Специальности" Association="Self.FK_Заявления_Специальности">
+      <End Role="Специальности" EntitySet="Специальности" />
+      <End Role="Заявления" EntitySet="Заявления" />
+    </AssociationSet>
+    <AssociationSet Name="fk_специальности" Association="Self.fk_специальности">
+      <End Role="Специальности" EntitySet="Специальности" />
+      <End Role="Заявления" EntitySet="Заявления" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

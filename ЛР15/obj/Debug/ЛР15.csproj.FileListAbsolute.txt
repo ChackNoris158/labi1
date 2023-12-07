@@ -1,0 +1,40 @@
+C:\Users\ip521-18\source\repos\ЛР15\ЛР15\bin\Debug\ЛР15.exe.config
+C:\Users\ip521-18\source\repos\ЛР15\ЛР15\bin\Debug\ЛР15.exe
+C:\Users\ip521-18\source\repos\ЛР15\ЛР15\bin\Debug\ЛР15.pdb
+C:\Users\ip521-18\source\repos\ЛР15\ЛР15\bin\Debug\EntityFramework.dll
+C:\Users\ip521-18\source\repos\ЛР15\ЛР15\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ip521-18\source\repos\ЛР15\ЛР15\bin\Debug\EntityFramework.xml
+C:\Users\ip521-18\source\repos\ЛР15\ЛР15\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ip521-18\source\repos\ЛР15\ЛР15\obj\Debug\ЛР15.csprojAssemblyReference.cache
+C:\Users\ip521-18\source\repos\ЛР15\ЛР15\obj\Debug\ЛР15.Properties.Resources.resources
+C:\Users\ip521-18\source\repos\ЛР15\ЛР15\obj\Debug\ЛР15.csproj.GenerateResource.cache
+C:\Users\ip521-18\source\repos\ЛР15\ЛР15\obj\Debug\ЛР15.csproj.CoreCompileInputs.cache
+C:\Users\ip521-18\source\repos\ЛР15\ЛР15\obj\Debug\ЛР15.csproj.CopyComplete
+C:\Users\ip521-18\source\repos\ЛР15\ЛР15\obj\Debug\ЛР15.exe
+C:\Users\ip521-18\source\repos\ЛР15\ЛР15\obj\Debug\ЛР15.pdb
+C:\Users\ip521-18\source\repos\ЛР15\ЛР15\obj\Debug\ЛР15.Form1.resources
+C:\Users\ip521-18\source\repos\ЛР15\ЛР15\obj\Debug\ЛР15.FormAddAbiturient.resources
+C:\Users\ip521-18\source\repos\ЛР15\ЛР15\obj\Debug\ЛР15.FormEditAbiturient.resources
+C:\Users\ip521-18\source\repos\ЛР15\ЛР15\obj\Debug\ЛР15.Form2.resources
+C:\Users\ip521-18\source\repos\ЛР15\ЛР15\obj\Debug\ЛР15.FormEditZayav.resources
+C:\Users\ip521-18\source\repos\ЛР15\ЛР15\obj\Debug\ЛР15.FormAddZayav.resources
+\\TAU\StudentsHomeFolders$\Ип5-21\Иваков Алексей Петрович - ip521-11\Мои документы\ЛР15\ЛР15\bin\Debug\ЛР15.exe.config
+\\TAU\StudentsHomeFolders$\Ип5-21\Иваков Алексей Петрович - ip521-11\Мои документы\ЛР15\ЛР15\bin\Debug\ЛР15.exe
+\\TAU\StudentsHomeFolders$\Ип5-21\Иваков Алексей Петрович - ip521-11\Мои документы\ЛР15\ЛР15\bin\Debug\ЛР15.pdb
+\\TAU\StudentsHomeFolders$\Ип5-21\Иваков Алексей Петрович - ip521-11\Мои документы\ЛР15\ЛР15\bin\Debug\EntityFramework.dll
+\\TAU\StudentsHomeFolders$\Ип5-21\Иваков Алексей Петрович - ip521-11\Мои документы\ЛР15\ЛР15\bin\Debug\EntityFramework.SqlServer.dll
+\\TAU\StudentsHomeFolders$\Ип5-21\Иваков Алексей Петрович - ip521-11\Мои документы\ЛР15\ЛР15\bin\Debug\EntityFramework.xml
+\\TAU\StudentsHomeFolders$\Ип5-21\Иваков Алексей Петрович - ip521-11\Мои документы\ЛР15\ЛР15\bin\Debug\EntityFramework.SqlServer.xml
+\\TAU\StudentsHomeFolders$\Ип5-21\Иваков Алексей Петрович - ip521-11\Мои документы\ЛР15\ЛР15\obj\Debug\ЛР15.csprojAssemblyReference.cache
+\\TAU\StudentsHomeFolders$\Ип5-21\Иваков Алексей Петрович - ip521-11\Мои документы\ЛР15\ЛР15\obj\Debug\ЛР15.Form1.resources
+\\TAU\StudentsHomeFolders$\Ип5-21\Иваков Алексей Петрович - ip521-11\Мои документы\ЛР15\ЛР15\obj\Debug\ЛР15.Form2.resources
+\\TAU\StudentsHomeFolders$\Ип5-21\Иваков Алексей Петрович - ip521-11\Мои документы\ЛР15\ЛР15\obj\Debug\ЛР15.FormAddAbiturient.resources
+\\TAU\StudentsHomeFolders$\Ип5-21\Иваков Алексей Петрович - ip521-11\Мои документы\ЛР15\ЛР15\obj\Debug\ЛР15.FormAddZayav.resources
+\\TAU\StudentsHomeFolders$\Ип5-21\Иваков Алексей Петрович - ip521-11\Мои документы\ЛР15\ЛР15\obj\Debug\ЛР15.FormEditAbiturient.resources
+\\TAU\StudentsHomeFolders$\Ип5-21\Иваков Алексей Петрович - ip521-11\Мои документы\ЛР15\ЛР15\obj\Debug\ЛР15.FormEditZayav.resources
+\\TAU\StudentsHomeFolders$\Ип5-21\Иваков Алексей Петрович - ip521-11\Мои документы\ЛР15\ЛР15\obj\Debug\ЛР15.Properties.Resources.resources
+\\TAU\StudentsHomeFolders$\Ип5-21\Иваков Алексей Петрович - ip521-11\Мои документы\ЛР15\ЛР15\obj\Debug\ЛР15.csproj.GenerateResource.cache
+\\TAU\StudentsHomeFolders$\Ип5-21\Иваков Алексей Петрович - ip521-11\Мои документы\ЛР15\ЛР15\obj\Debug\ЛР15.csproj.CoreCompileInputs.cache
+\\TAU\StudentsHomeFolders$\Ип5-21\Иваков Алексей Петрович - ip521-11\Мои документы\ЛР15\ЛР15\obj\Debug\ЛР15.csproj.CopyComplete
+\\TAU\StudentsHomeFolders$\Ип5-21\Иваков Алексей Петрович - ip521-11\Мои документы\ЛР15\ЛР15\obj\Debug\ЛР15.exe
+\\TAU\StudentsHomeFolders$\Ип5-21\Иваков Алексей Петрович - ip521-11\Мои документы\ЛР15\ЛР15\obj\Debug\ЛР15.pdb

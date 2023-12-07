@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Ip521_SegaAndGeraModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Customers">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ContactName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CompanyName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="groups">
+    <Key>
+      <PropertyRef Name="id_gr" />
+    </Key>
+    <Property Name="id_gr" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nazv_gr" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="count" Type="Int32" />
+  </EntityType>
+  <EntityType Name="students">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fam" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="pol" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="group" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="dataRo" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="uspev" Relationship="Self.FK__uspev__id_s__3B75D760" FromRole="students" ToRole="uspev" />
+  </EntityType>
+  <EntityType Name="uspev">
+    <Key>
+      <PropertyRef Name="id_s" />
+      <PropertyRef Name="disk" />
+    </Key>
+    <Property Name="id_s" Type="Byte" Nullable="false" />
+    <Property Name="disk" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ocenka" Type="Decimal" Precision="3" Scale="2" />
+    <Property Name="Дата" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="students" Relationship="Self.FK__uspev__id_s__3B75D760" FromRole="uspev" ToRole="students" />
+  </EntityType>
+  <EntityType Name="Абитуриенты">
+    <Key>
+      <PropertyRef Name="Код_абитуриента" />
+    </Key>
+    <Property Name="Код_абитуриента" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Фамилия" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Имя" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Отчество" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Статус" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Город" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Заявления" Relationship="Self.FK_Заявления_Абитуриенты" FromRole="Абитуриенты" ToRole="Заявления" />
+    <NavigationProperty Name="Заявления1" Relationship="Self.FK_Заявления_Абитуриенты1" FromRole="Абитуриенты" ToRole="Заявления" />
+  </EntityType>
+  <EntityType Name="Дисциплины">
+    <Key>
+      <PropertyRef Name="Код_дисциплины" />
+    </Key>
+    <Property Name="Код_дисциплины" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Название" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Журнал">
+    <Key>
+      <PropertyRef Name="Код_события" />
+    </Key>
+    <Property Name="Код_события" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Описание" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Дата" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="Заявления">
+    <Key>
+      <PropertyRef Name="Код_заявления" />
+    </Key>
+    <Property Name="Код_заявления" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Код_абитуриента" Type="Int32" Nullable="false" />
+    <Property Name="Код_специальности" Type="Int32" Nullable="false" />
+    <Property Name="Статус" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Абитуриенты" Relationship="Self.FK_Заявления_Абитуриенты" FromRole="Заявления" ToRole="Абитуриенты" />
+    <NavigationProperty Name="Абитуриенты1" Relationship="Self.FK_Заявления_Абитуриенты1" FromRole="Заявления" ToRole="Абитуриенты" />
+    <NavigationProperty Name="Специальности" Relationship="Self.FK_Заявления_Специальности" FromRole="Заявления" ToRole="Специальности" />
+    <NavigationProperty Name="Специальности1" Relationship="Self.fk_специальности" FromRole="Заявления" ToRole="Специальности" />
+  </EntityType>
+  <EntityType Name="Оценки">
+    <Key>
+      <PropertyRef Name="Код_оценки" />
+    </Key>
+    <Property Name="Код_оценки" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Код_абитуриента" Type="Int32" Nullable="false" />
+    <Property Name="Код_экзамена" Type="Int32" Nullable="false" />
+    <Property Name="Оценка" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Специальности">
+    <Key>
+      <PropertyRef Name="Код_специальности" />
+    </Key>
+    <Property Name="Код_специальности" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Название" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Вакансия" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Заявления" Relationship="Self.FK_Заявления_Специальности" FromRole="Специальности" ToRole="Заявления" />
+    <NavigationProperty Name="Заявления1" Relationship="Self.fk_специальности" FromRole="Специальности" ToRole="Заявления" />
+  </EntityType>
+  <EntityType Name="Экзамены">
+    <Key>
+      <PropertyRef Name="Код_экзамена" />
+    </Key>
+    <Property Name="Код_экзамена" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Код_специальности" Type="Int32" />
+    <Property Name="Код_дисциплины" Type="Int32" />
+    <Property Name="Дата" Type="DateTime" Precision="0" />
+    <Property Name="Положительный_балл" Type="Int32" />
+  </EntityType>
+  <Association Name="FK__uspev__id_s__3B75D760">
+    <End Role="students" Type="Self.students" Multiplicity="1" />
+    <End Role="uspev" Type="Self.uspev" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="students">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="uspev">
+        <PropertyRef Name="id_s" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Заявления_Абитуриенты">
+    <End Role="Абитуриенты" Type="Self.Абитуриенты" Multiplicity="1" />
+    <End Role="Заявления" Type="Self.Заявления" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Абитуриенты">
+        <PropertyRef Name="Код_абитуриента" />
+      </Principal>
+      <Dependent Role="Заявления">
+        <PropertyRef Name="Код_абитуриента" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Заявления_Абитуриенты1">
+    <End Role="Абитуриенты" Type="Self.Абитуриенты" Multiplicity="1" />
+    <End Role="Заявления" Type="Self.Заявления" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Абитуриенты">
+        <PropertyRef Name="Код_абитуриента" />
+      </Principal>
+      <Dependent Role="Заявления">
+        <PropertyRef Name="Код_абитуриента" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Заявления_Специальности">
+    <End Role="Специальности" Type="Self.Специальности" Multiplicity="1" />
+    <End Role="Заявления" Type="Self.Заявления" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Специальности">
+        <PropertyRef Name="Код_специальности" />
+      </Principal>
+      <Dependent Role="Заявления">
+        <PropertyRef Name="Код_специальности" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_специальности">
+    <End Role="Специальности" Type="Self.Специальности" Multiplicity="1" />
+    <End Role="Заявления" Type="Self.Заявления" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Специальности">
+        <PropertyRef Name="Код_специальности" />
+      </Principal>
+      <Dependent Role="Заявления">
+        <PropertyRef Name="Код_специальности" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Ip521_SegaAndGeraEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Customers" EntityType="Self.Customers" />
+    <EntitySet Name="groups" EntityType="Self.groups" />
+    <EntitySet Name="students" EntityType="Self.students" />
+    <EntitySet Name="uspev" EntityType="Self.uspev" />
+    <EntitySet Name="Абитуриенты" EntityType="Self.Абитуриенты" />
+    <EntitySet Name="Дисциплины" EntityType="Self.Дисциплины" />
+    <EntitySet Name="Журнал" EntityType="Self.Журнал" />
+    <EntitySet Name="Заявления" EntityType="Self.Заявления" />
+    <EntitySet Name="Оценки" EntityType="Self.Оценки" />
+    <EntitySet Name="Специальности" EntityType="Self.Специальности" />
+    <EntitySet Name="Экзамены" EntityType="Self.Экзамены" />
+    <AssociationSet Name="FK__uspev__id_s__3B75D760" Association="Self.FK__uspev__id_s__3B75D760">
+      <End Role="students" EntitySet="students" />
+      <End Role="uspev" EntitySet="uspev" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Заявления_Абитуриенты" Association="Self.FK_Заявления_Абитуриенты">
+      <End Role="Абитуриенты" EntitySet="Абитуриенты" />
+      <End Role="Заявления" EntitySet="Заявления" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Заявления_Абитуриенты1" Association="Self.FK_Заявления_Абитуриенты1">
+      <End Role="Абитуриенты" EntitySet="Абитуриенты" />
+      <End Role="Заявления" EntitySet="Заявления" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Заявления_Специальности" Association="Self.FK_Заявления_Специальности">
+      <End Role="Специальности" EntitySet="Специальности" />
+      <End Role="Заявления" EntitySet="Заявления" />
+    </AssociationSet>
+    <AssociationSet Name="fk_специальности" Association="Self.fk_специальности">
+      <End Role="Специальности" EntitySet="Специальности" />
+      <End Role="Заявления" EntitySet="Заявления" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

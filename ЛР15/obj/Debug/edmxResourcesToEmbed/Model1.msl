@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище Ip521_SegaAndGeraModelContainer" CdmEntityContainer="Ip521_SegaAndGeraEntities">
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="Ip521_SegaAndGeraModel.Customers">
+        <MappingFragment StoreEntitySet="Customers">
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="groups">
+      <EntityTypeMapping TypeName="Ip521_SegaAndGeraModel.groups">
+        <MappingFragment StoreEntitySet="groups">
+          <ScalarProperty Name="id_gr" ColumnName="id_gr" />
+          <ScalarProperty Name="nazv_gr" ColumnName="nazv_gr" />
+          <ScalarProperty Name="count" ColumnName="count" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="students">
+      <EntityTypeMapping TypeName="Ip521_SegaAndGeraModel.students">
+        <MappingFragment StoreEntitySet="students">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="fam" ColumnName="fam" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="pol" ColumnName="pol" />
+          <ScalarProperty Name="group" ColumnName="group" />
+          <ScalarProperty Name="dataRo" ColumnName="dataRo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="uspev">
+      <EntityTypeMapping TypeName="Ip521_SegaAndGeraModel.uspev">
+        <MappingFragment StoreEntitySet="uspev">
+          <ScalarProperty Name="id_s" ColumnName="id_s" />
+          <ScalarProperty Name="disk" ColumnName="disk" />
+          <ScalarProperty Name="ocenka" ColumnName="ocenka" />
+          <ScalarProperty Name="Дата" ColumnName="Дата" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Абитуриенты">
+      <EntityTypeMapping TypeName="Ip521_SegaAndGeraModel.Абитуриенты">
+        <MappingFragment StoreEntitySet="Абитуриенты">
+          <ScalarProperty Name="Код_абитуриента" ColumnName="Код_абитуриента" />
+          <ScalarProperty Name="Фамилия" ColumnName="Фамилия" />
+          <ScalarProperty Name="Имя" ColumnName="Имя" />
+          <ScalarProperty Name="Отчество" ColumnName="Отчество" />
+          <ScalarProperty Name="Статус" ColumnName="Статус" />
+          <ScalarProperty Name="Город" ColumnName="Город" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Дисциплины">
+      <EntityTypeMapping TypeName="Ip521_SegaAndGeraModel.Дисциплины">
+        <MappingFragment StoreEntitySet="Дисциплины">
+          <ScalarProperty Name="Код_дисциплины" ColumnName="Код_дисциплины" />
+          <ScalarProperty Name="Название" ColumnName="Название" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Журнал">
+      <EntityTypeMapping TypeName="Ip521_SegaAndGeraModel.Журнал">
+        <MappingFragment StoreEntitySet="Журнал">
+          <ScalarProperty Name="Код_события" ColumnName="Код_события" />
+          <ScalarProperty Name="Описание" ColumnName="Описание" />
+          <ScalarProperty Name="Дата" ColumnName="Дата" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Заявления">
+      <EntityTypeMapping TypeName="Ip521_SegaAndGeraModel.Заявления">
+        <MappingFragment StoreEntitySet="Заявления">
+          <ScalarProperty Name="Код_заявления" ColumnName="Код_заявления" />
+          <ScalarProperty Name="Код_абитуриента" ColumnName="Код_абитуриента" />
+          <ScalarProperty Name="Код_специальности" ColumnName="Код_специальности" />
+          <ScalarProperty Name="Статус" ColumnName="Статус" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Оценки">
+      <EntityTypeMapping TypeName="Ip521_SegaAndGeraModel.Оценки">
+        <MappingFragment StoreEntitySet="Оценки">
+          <ScalarProperty Name="Код_оценки" ColumnName="Код_оценки" />
+          <ScalarProperty Name="Код_абитуриента" ColumnName="Код_абитуриента" />
+          <ScalarProperty Name="Код_экзамена" ColumnName="Код_экзамена" />
+          <ScalarProperty Name="Оценка" ColumnName="Оценка" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Специальности">
+      <EntityTypeMapping TypeName="Ip521_SegaAndGeraModel.Специальности">
+        <MappingFragment StoreEntitySet="Специальности">
+          <ScalarProperty Name="Код_специальности" ColumnName="Код_специальности" />
+          <ScalarProperty Name="Название" ColumnName="Название" />
+          <ScalarProperty Name="Вакансия" ColumnName="Вакансия" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Экзамены">
+      <EntityTypeMapping TypeName="Ip521_SegaAndGeraModel.Экзамены">
+        <MappingFragment StoreEntitySet="Экзамены">
+          <ScalarProperty Name="Код_экзамена" ColumnName="Код_экзамена" />
+          <ScalarProperty Name="Код_специальности" ColumnName="Код_специальности" />
+          <ScalarProperty Name="Код_дисциплины" ColumnName="Код_дисциплины" />
+          <ScalarProperty Name="Дата" ColumnName="Дата" />
+          <ScalarProperty Name="Положительный_балл" ColumnName="Положительный_балл" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
